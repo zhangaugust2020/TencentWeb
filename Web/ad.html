@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流氓广告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            height: 3000px;
+        }
+
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+            position: fixed;
+            right: 0;
+            bottom: 100px;
+        }
+
+        #box2 {
+            width: 30px;
+            height: 30px;
+            background-color: chartreuse;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="box1">
+            <div id="box2">X</div>
+            我是流氓广告
+        </div>
+    </div>
+    <script>
+        // 将你的代码写在这里
+        let box1 = document.getElementById('box1');
+
+        box1.onclick = function (e) {
+            if (e.target.id === 'box2') {
+                box1.style.display = 'none';
+                setTimeout(() => {
+                    box1.style.display = 'block';
+                }, 1000);
+            }
+        };
+        console.log(box2);
+    </script>
+</body>
+
+</html>
